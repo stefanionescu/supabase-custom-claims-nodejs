@@ -6,7 +6,7 @@ This repo hosts demo code that you can use to set up and use [Supabase](https://
 
 You need to create an account on [Supabase](https://supabase.com/) and set up a new project. You also need to have [Node](https://nodejs.org/en/download/package-manager) installed on your machine.
 
-## Supabase SQL Script
+## Supabase SQL Script
 
 After you create your Supabase project, you can go to the SQL Editor and run this script:
 
