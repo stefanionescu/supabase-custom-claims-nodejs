@@ -101,4 +101,5 @@ async function createUserIfNotExists(token, username) {
 }
 
 const token = generateJWT();
-const user  = await createUserIfNotExists(token, "newUsername")
+const user  = await createUserIfNotExists(token, "newUsername");
+console.log("New user:", user);

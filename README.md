@@ -1,4 +1,4 @@
-# Supabase Custom Claims for NodeJS
+# Supabase Custom Claims for NodeJS
 
 This repo hosts demo code that you can use to set up and use [Supabase](https://supabase.com/) custom claims for your project.
 

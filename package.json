@@ -2,7 +2,7 @@
   "name": "supabase-custom-claims-nodejs",
   "version": "1.0.0",
   "main": "index.js",
-  "description": "",
+  "description": "An example of custom claims for Supabase projects and NodeJS code used to query and edit tables",
   "scripts": {
     "lint": "eslint ."
   },
