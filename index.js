@@ -100,6 +100,40 @@ async function createUserIfNotExists(token, username) {
     console.log('SUPABASE: No user was created.');
 }
 
+async function saveVideoToBucket(token, videoURL, videoType) {
+    // Save the video to Supabase
+    const supabase = getSupabaseClient(token);
+    let path       = "";
+    try {
+        const fetch = (await import('node-fetch')).default;
+
+        const response    = await fetch(videoURL);
+        const videoBuffer = await response.arrayBuffer();
+
+        path = `test_video/video.${videoType}`;
+
+        const { data, error } = await supabase
+            .storage
+            .from(PARAMS.SUPABASE_BUCKET)
+            .upload(path, videoBuffer, {
+                contentType: `video/${videoType}`,
+                upsert: false
+            });
+
+        if (error) throw error;
+
+        console.log('SUPABASE: Uploaded video successfully:', path);
+    } catch (error) {
+        console.error('SUPABASE: Error uploading video:', error);
+        return;
+    }
+
+    return path;
+}
+
 const token = generateJWT();
 const user  = await createUserIfNotExists(token, "newUsername");
 console.log("New user:", user);
+// Uncomment if you want to store a video as well
+// const videoPath = await saveVideoToBucket(token, "");
+// console.log("Video path:", videoPath);

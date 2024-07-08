@@ -16,7 +16,8 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.44.2",
     "dotenv": "^16.4.5",
-    "jsonwebtoken": "^9.0.2"
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2"
   },
   "devDependencies": {
     "eslint": "^9.5.0"
