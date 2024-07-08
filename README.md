@@ -8,7 +8,7 @@ You need to create an account on [Supabase](https://supabase.com/) and set up a 
 
 ## Supabase SQL Script
 
-After you create your Supabase project, you can go to the SQL Editor and run the script under `sql/create-table.sql` to create a table which can be modified using custom claims. If you also want a bucket that you can access using custom claims, run the script under `sql/create-bucket.sql`.
+After you create your Supabase project, you can go to the SQL Editor and run the script under `sql/create-table.sql` to create a table that can be accessed using custom claims. If you also want a bucket that can be accessed using custom claims, run the script under `sql/create-bucket.sql`.
 
 ## Run the Test Code
 
